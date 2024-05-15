@@ -23,7 +23,7 @@ const FormTodo = ({ data }: { data: VerificationToken[] }) => {
 
   return (
     <>
-      <form action={insertPost}>
+      <form action={insert}>
         <input type="text" name="title" id="" />
         <InsertButton>Insert</InsertButton>
       </form>

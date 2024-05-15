@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import { useFormStatus } from "react-dom";
 
 const InsertButton = ({ children }: { children: React.ReactNode }) => {
   const { pending } = useFormStatus();

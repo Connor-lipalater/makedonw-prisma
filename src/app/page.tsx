@@ -1,11 +1,13 @@
-import FormTodo from "@/components/form/FormTodo";
+import FormTodo from "@/app/form/FormTodo";
 import { getList } from "@/server/posts";
+import HomePage from ".";
 
 export default async function Home() {
   let dataList: any = await getList();
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <FormTodo data={dataList}></FormTodo>
+    <main className="">
+      {/* <FormTodo data={dataList}></FormTodo> */}
+      <HomePage data={dataList}></HomePage>
     </main>
   );
 }

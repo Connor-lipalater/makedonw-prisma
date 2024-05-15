@@ -7,13 +7,13 @@ import { revalidatePath } from "next/cache";
 
 const prisma = new PrismaClient();
 
-export const insert = async (val: string) => {
+export const insert = async (title: string) => {
   try {
-    if (val) {
+    if (title) {
       await prisma.verificationToken.create({
         data: {
-          identifier: val,
-          token: val,
+          identifier: title,
+          token: title,
           expires: new Date(),
         },
       });
